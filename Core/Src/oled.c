@@ -383,6 +383,7 @@ void OLED_ShowPicture(uint8_t x, uint8_t y, uint8_t sizex, uint8_t sizey, uint8_
             y = y0;
         }
     }
+    OLED_Refresh();
 }
 
 //OLED初始化

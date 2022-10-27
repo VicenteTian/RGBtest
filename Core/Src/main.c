@@ -25,6 +25,7 @@
 /* USER CODE BEGIN Includes */
 #include "oled.h"
 #include "bmp.h"
+#include "MPU6050.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -88,10 +89,10 @@ int main(void)
   MX_GPIO_Init();
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
-    uint8_t t=' ';
     OLED_Init();
-    OLED_ColorTurn(0);//0Õý³£ÏÔÊ¾£¬1 ·´É«ÏÔÊ¾
-    OLED_DisplayTurn(0);//0Õý³£ÏÔÊ¾ 1 ÆÁÄ»·­×ªÏÔÊ¾
+    OLED_ShowPicture(0,0,128,64,BMP1,1);
+    if(!MPU6050_Init())                                    //³õÊ¼»¯MPU6050Ä£¿é   Èô³õÊ¼»¯³É¹¦£¬ÈýÉ«LED³ÊÏÖ×ÏÉ«
+        HAL_GPIO_WritePin(GPIOA, Green_Pin, GPIO_PIN_SET);//ÈýÉ«LEDÖÐµÄÂÌµÆÃð;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -103,50 +104,17 @@ int main(void)
         HAL_GPIO_WritePin(Blue_GPIO_Port, Blue_Pin, GPIO_PIN_RESET);
         HAL_GPIO_WritePin(Green_GPIO_Port, Green_Pin, GPIO_PIN_SET);
         HAL_GPIO_WritePin(GPIOA, Red_Pin, GPIO_PIN_SET);
-        HAL_Delay(100);
+        HAL_Delay(50);
         HAL_GPIO_WritePin(Blue_GPIO_Port, Blue_Pin, GPIO_PIN_SET);
         HAL_GPIO_WritePin(Green_GPIO_Port, Green_Pin, GPIO_PIN_RESET);
         HAL_GPIO_WritePin(GPIOA, Red_Pin, GPIO_PIN_SET);
-        HAL_Delay(100);
+        HAL_Delay(50);
         HAL_GPIO_WritePin(Blue_GPIO_Port, Blue_Pin, GPIO_PIN_SET);
         HAL_GPIO_WritePin(Green_GPIO_Port, Green_Pin, GPIO_PIN_SET);
         HAL_GPIO_WritePin(GPIOA, Red_Pin, GPIO_PIN_RESET);
-        HAL_Delay(100);
-        OLED_ShowPicture(0,0,128,64,BMP1,1);
-        OLED_Refresh();
-        HAL_Delay(500);
-        OLED_Clear();
-        OLED_ShowChinese(0,0,0,16,1);//ÖÐ
-        OLED_ShowChinese(18,0,1,16,1);//¾°
-        OLED_ShowChinese(36,0,2,16,1);//Ô°
-        OLED_ShowChinese(54,0,3,16,1);//µç
-        OLED_ShowChinese(72,0,4,16,1);//×Ó
-        OLED_ShowChinese(90,0,5,16,1);//¼¼
-        OLED_ShowChinese(108,0,6,16,1);//Êõ
-        OLED_ShowString(8,16,"ZHONGJINGYUAN",16,1);
-        OLED_ShowString(20,32,"2014/05/01",16,1);
-        OLED_ShowString(0,48,"ASCII:",16,1);
-        OLED_ShowString(63,48,"CODE:",16,1);
-        OLED_ShowChar(48,48,t,16,1);//ÏÔÊ¾ASCII×Ö·û
-        t++;
-        if(t>'~')t=' ';
-        OLED_ShowNum(103,48,t,3,16,1);
-        OLED_Refresh();
-        HAL_Delay(500);
-        OLED_Clear();
-        OLED_ShowChinese(0,0,0,16,1);  //16*16 ÖÐ
-        OLED_ShowChinese(16,0,0,24,1); //24*24 ÖÐ
-        OLED_ShowChinese(24,20,0,32,1);//32*32 ÖÐ
-        OLED_ShowChinese(64,0,0,64,1); //64*64 ÖÐ
-        OLED_Refresh();
-        HAL_Delay(500);
-        OLED_Clear();
-        OLED_ShowString(0,0,"ABC",8,1);//6*8 ¡°ABC¡±
-        OLED_ShowString(0,8,"ABC",12,1);//6*12 ¡°ABC¡±
-        OLED_ShowString(0,20,"ABC",16,1);//8*16 ¡°ABC¡±
-        OLED_ShowString(0,36,"ABC",24,1);//12*24 ¡°ABC¡±
-        OLED_Refresh();
-        HAL_Delay(500);
+        HAL_Delay(50);
+        Fetch_MPU6050();
+
         //OLED_ScrollDisplay(11,4,1);
     }
   /* USER CODE END 3 */
