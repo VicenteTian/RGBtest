@@ -53,7 +53,7 @@ build CMakeFiles/RGBtest.elf.dir/Core/Src/MPU6050.c.obj: C_COMPILER__RGBtest.2ee
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Core\Src\MPU6050.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Core\Src
 
@@ -61,7 +61,7 @@ build CMakeFiles/RGBtest.elf.dir/Core/Src/UART.c.obj: C_COMPILER__RGBtest.2eelf_
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Core\Src\UART.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Core\Src
 
@@ -69,7 +69,7 @@ build CMakeFiles/RGBtest.elf.dir/Core/Src/gpio.c.obj: C_COMPILER__RGBtest.2eelf_
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Core\Src\gpio.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Core\Src
 
@@ -77,7 +77,7 @@ build CMakeFiles/RGBtest.elf.dir/Core/Src/main.c.obj: C_COMPILER__RGBtest.2eelf_
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Core\Src\main.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Core\Src
 
@@ -85,7 +85,7 @@ build CMakeFiles/RGBtest.elf.dir/Core/Src/oled.c.obj: C_COMPILER__RGBtest.2eelf_
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Core\Src\oled.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Core\Src
 
@@ -93,7 +93,7 @@ build CMakeFiles/RGBtest.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj: C_COMPILER__R
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Core\Src\stm32f1xx_hal_msp.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Core\Src
 
@@ -101,7 +101,7 @@ build CMakeFiles/RGBtest.elf.dir/Core/Src/stm32f1xx_it.c.obj: C_COMPILER__RGBtes
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Core\Src\stm32f1xx_it.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Core\Src
 
@@ -109,7 +109,7 @@ build CMakeFiles/RGBtest.elf.dir/Core/Src/syscalls.c.obj: C_COMPILER__RGBtest.2e
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Core\Src\syscalls.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Core\Src
 
@@ -117,7 +117,7 @@ build CMakeFiles/RGBtest.elf.dir/Core/Src/system_stm32f1xx.c.obj: C_COMPILER__RG
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Core\Src\system_stm32f1xx.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Core\Src
 
@@ -125,7 +125,7 @@ build CMakeFiles/RGBtest.elf.dir/Core/Src/u_iic.c.obj: C_COMPILER__RGBtest.2eelf
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Core\Src\u_iic.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Core\Src
 
@@ -133,15 +133,31 @@ build CMakeFiles/RGBtest.elf.dir/Core/Src/usart.c.obj: C_COMPILER__RGBtest.2eelf
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Core\Src\usart.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Core\Src
+
+build CMakeFiles/RGBtest.elf.dir/Core/eMPL/inv_mpu.c.obj: C_COMPILER__RGBtest.2eelf_Debug E$:/files/project/Toy_car/RGBtest/Core/eMPL/inv_mpu.c || cmake_object_order_depends_target_RGBtest.elf
+  DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\RGBtest.elf.dir\Core\eMPL\inv_mpu.c.obj.d
+  FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Core\eMPL
+
+build CMakeFiles/RGBtest.elf.dir/Core/eMPL/inv_mpu_dmp_motion_driver.c.obj: C_COMPILER__RGBtest.2eelf_Debug E$:/files/project/Toy_car/RGBtest/Core/eMPL/inv_mpu_dmp_motion_driver.c || cmake_object_order_depends_target_RGBtest.elf
+  DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\RGBtest.elf.dir\Core\eMPL\inv_mpu_dmp_motion_driver.c.obj.d
+  FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Core\eMPL
 
 build CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj: C_COMPILER__RGBtest.2eelf_Debug E$:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c || cmake_object_order_depends_target_RGBtest.elf
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src
 
@@ -149,7 +165,7 @@ build CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src
 
@@ -157,7 +173,7 @@ build CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src
 
@@ -165,7 +181,7 @@ build CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src
 
@@ -173,7 +189,7 @@ build CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src
 
@@ -181,7 +197,7 @@ build CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src
 
@@ -189,7 +205,7 @@ build CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src
 
@@ -197,7 +213,7 @@ build CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src
 
@@ -205,7 +221,7 @@ build CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src
 
@@ -213,7 +229,7 @@ build CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src
 
@@ -221,7 +237,7 @@ build CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src
 
@@ -229,7 +245,7 @@ build CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src
 
@@ -237,7 +253,7 @@ build CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src
 
@@ -245,7 +261,7 @@ build CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src
 
@@ -253,7 +269,7 @@ build CMakeFiles/RGBtest.elf.dir/startup/startup_stm32f103xb.s.obj: ASM_COMPILER
   DEFINES = -DSTM32F103xB -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\RGBtest.elf.dir\startup\startup_stm32f103xb.s.obj.d
   FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -x assembler-with-cpp -Og -g
-  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
+  INCLUDES = -IE:/files/project/Toy_car/RGBtest/Core/Inc -IE:/files/project/Toy_car/RGBtest/Core/eMPL -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc -IE:/files/project/Toy_car/RGBtest/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IE:/files/project/Toy_car/RGBtest/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir
   OBJECT_FILE_DIR = CMakeFiles\RGBtest.elf.dir\startup
 
@@ -265,7 +281,7 @@ build CMakeFiles/RGBtest.elf.dir/startup/startup_stm32f103xb.s.obj: ASM_COMPILER
 #############################################
 # Link the executable RGBtest.elf
 
-build RGBtest.elf: C_EXECUTABLE_LINKER__RGBtest.2eelf_Debug CMakeFiles/RGBtest.elf.dir/Core/Src/MPU6050.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/UART.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/gpio.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/main.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/oled.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/stm32f1xx_it.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/syscalls.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/system_stm32f1xx.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/u_iic.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/usart.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj CMakeFiles/RGBtest.elf.dir/startup/startup_stm32f103xb.s.obj
+build RGBtest.elf: C_EXECUTABLE_LINKER__RGBtest.2eelf_Debug CMakeFiles/RGBtest.elf.dir/Core/Src/MPU6050.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/UART.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/gpio.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/main.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/oled.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/stm32f1xx_it.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/syscalls.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/system_stm32f1xx.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/u_iic.c.obj CMakeFiles/RGBtest.elf.dir/Core/Src/usart.c.obj CMakeFiles/RGBtest.elf.dir/Core/eMPL/inv_mpu.c.obj CMakeFiles/RGBtest.elf.dir/Core/eMPL/inv_mpu_dmp_motion_driver.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj CMakeFiles/RGBtest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj CMakeFiles/RGBtest.elf.dir/startup/startup_stm32f103xb.s.obj
   FLAGS = -g
   LINK_FLAGS = -Wl,-gc-sections,--print-memory-usage,-Map=E:/files/project/Toy_car/RGBtest/cmake-build-debug/RGBtest.map -mcpu=cortex-m3 -mthumb -mthumb-interwork -T E:/files/project/Toy_car/RGBtest/STM32F103C8Tx_FLASH.ld
   OBJECT_DIR = CMakeFiles\RGBtest.elf.dir

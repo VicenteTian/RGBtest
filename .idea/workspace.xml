@@ -17,18 +17,20 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb65de40-eefe-49da-8f1c-792a41f6b96e" name="Changes" comment="feat: 获取MPU6050中的数据">
+    <list default="true" id="eb65de40-eefe-49da-8f1c-792a41f6b96e" name="Changes" comment="refactor: 文件注释重写">
+      <change afterPath="$PROJECT_DIR$/Core/eMPL/dmpKey.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/eMPL/dmpmap.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/eMPL/inv_mpu.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/eMPL/inv_mpu.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/eMPL/inv_mpu_dmp_motion_driver.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/eMPL/inv_mpu_dmp_motion_driver.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/UART.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/UART.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/MPU6050.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/MPU6050.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/MPU6050.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/MPU6050.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/UART.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/UART.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u_iic.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/u_iic.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-c21bbe84f7cab2b9b7e0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-5a4235f8285b593adf36.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-10-25T09-58-32-0366.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-RGBtest.elf-Debug-0652b8003ce27c001a1c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/oled.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/oled.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/RGBtest.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RGBtest.bin" afterDir="false" />
@@ -125,7 +127,7 @@
       <workItem from="1666684673114" duration="66000" />
       <workItem from="1666684746515" duration="6727000" />
       <workItem from="1666691943123" duration="5511000" />
-      <workItem from="1666837236910" duration="9461000" />
+      <workItem from="1666837236910" duration="15976000" />
     </task>
     <task id="LOCAL-00001" summary="refactor: OLED注释修改">
       <created>1666694963172</created>
@@ -141,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666858818433</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactor: 文件注释重写">
+      <created>1666879571090</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666879571090</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +171,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="refactor: OLED注释修改" />
     <MESSAGE value="feat: 获取MPU6050中的数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 获取MPU6050中的数据" />
+    <MESSAGE value="refactor: 文件注释重写" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: 文件注释重写" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

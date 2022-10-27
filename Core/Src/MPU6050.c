@@ -93,15 +93,13 @@ uint8_t MPU_Set_Rate(uint16_t rate)
 
 //得到温度值
 //返回值:温度值(扩大了100倍)
-short MPU_Get_Temperature(void)
+float MPU_Get_Temperature(void)
 {
     uint8_t buf[2];
     short raw;
-    float temp;
     MPU_Read_Len(MPU6050_ADDR,MPU_TEMP_OUTH_REG,2,buf);
     raw=((uint16_t)buf[0]<<8)|buf[1];
-    temp=21+((double)raw)/333.87;
-    return (short)temp*100;
+    return (((double)raw)/340.0+36.53);
 }
 //得到陀螺仪值(原始值)
 //gx,gy,gz:陀螺仪x,y,z轴的原始读数(带符号)
@@ -222,8 +220,6 @@ void Fetch_MPU6050(void)
 {
     int16_t aacx,aacy,aacz;	//加速度传感器原始数据
     int16_t gyrox,gyroy,gyroz;	//陀螺仪原始数据
-
-    // temp=MPU_Get_Temperature();	//得到温度值
     MPU_Get_Raw_data(&aacx,&aacy,&aacz,&gyrox,&gyroy,&gyroz);	//得到加速度传感器数据
     var_MPU6050[0]=4*9.8*aacx/32768;
     var_MPU6050[1]=4*9.8*aacy/32768;
@@ -231,8 +227,8 @@ void Fetch_MPU6050(void)
     var_MPU6050[3]=2000.0*gyrox/32768;
     var_MPU6050[4]=2000.0*gyroy/32768;
     var_MPU6050[5]=2000.0*gyroz/32768;
+    var_MPU6050[6]=MPU_Get_Temperature();	//得到温度值;
     vcan_sendware((uint8_t *)var_MPU6050, sizeof(var_MPU6050));
-
 }
 void cf_angle(float A_angle, float G_angleSpeed)
 {

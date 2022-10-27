@@ -26,6 +26,8 @@
 #include "oled.h"
 #include "bmp.h"
 #include "MPU6050.h"
+#include "inv_mpu.h"
+#include "UART.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -66,8 +68,8 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
-  /* USER CODE END 1 */
+    float var_MPU6050[4]={0};
+    /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
 
@@ -91,8 +93,14 @@ int main(void)
   /* USER CODE BEGIN 2 */
     OLED_Init();
     OLED_ShowPicture(0,0,128,64,BMP1,1);
-    if(!MPU6050_Init())
+   // if(!MPU6050_Init())
         HAL_GPIO_WritePin(GPIOA, Green_Pin, GPIO_PIN_RESET);
+    mpu_dmp_init();								 //=====³õÊ¼»¯MPU6050µÄDMPÄ£Ê½
+    OLED_Clear();
+    OLED_ShowString(0,0,"Pitch:",12,1);
+    OLED_ShowString(0,8,"Roll :",12,1);
+    OLED_ShowString(0,16,"Yaw  :",12,1);
+    OLED_ShowString(0,32,"Temp :",12,1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -102,7 +110,9 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
         HAL_Delay(50);
-        Fetch_MPU6050();
+        var_MPU6050[3]=mpu_dmp_get_data(&var_MPU6050[0],&var_MPU6050[1],&var_MPU6050[2]);			//得到姿态角即欧拉角
+        vcan_sendware((uint8_t *)var_MPU6050, sizeof(var_MPU6050));
+
     }
   /* USER CODE END 3 */
 }

@@ -263,6 +263,7 @@ void OLED_ShowString(uint8_t x, uint8_t y, uint8_t *chr, uint8_t size1, uint8_t 
         else x += size1 / 2;
         chr++;
     }
+    OLED_Refresh();
 }
 
 //m^n
