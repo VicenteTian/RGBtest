@@ -91,8 +91,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
     OLED_Init();
     OLED_ShowPicture(0,0,128,64,BMP1,1);
-    if(!MPU6050_Init())                                    //³õÊ¼»¯MPU6050Ä£¿é   Èô³õÊ¼»¯³É¹¦£¬ÈýÉ«LED³ÊÏÖ×ÏÉ«
-        HAL_GPIO_WritePin(GPIOA, Green_Pin, GPIO_PIN_SET);//ÈýÉ«LEDÖÐµÄÂÌµÆÃð;
+    if(!MPU6050_Init())
+        HAL_GPIO_WritePin(GPIOA, Green_Pin, GPIO_PIN_RESET);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -101,21 +101,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-        HAL_GPIO_WritePin(Blue_GPIO_Port, Blue_Pin, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(Green_GPIO_Port, Green_Pin, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(GPIOA, Red_Pin, GPIO_PIN_SET);
-        HAL_Delay(50);
-        HAL_GPIO_WritePin(Blue_GPIO_Port, Blue_Pin, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(Green_GPIO_Port, Green_Pin, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(GPIOA, Red_Pin, GPIO_PIN_SET);
-        HAL_Delay(50);
-        HAL_GPIO_WritePin(Blue_GPIO_Port, Blue_Pin, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(Green_GPIO_Port, Green_Pin, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(GPIOA, Red_Pin, GPIO_PIN_RESET);
         HAL_Delay(50);
         Fetch_MPU6050();
-
-        //OLED_ScrollDisplay(11,4,1);
     }
   /* USER CODE END 3 */
 }

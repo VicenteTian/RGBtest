@@ -65,7 +65,7 @@ void MPU6050_IIC_Start(void)
         MPU6050_SDA_OUT();
 	IIC_SDA_H;
 	IIC_SCL_H;
-	HAL_Delay(4);
+    delay_us(4);
  	IIC_SDA_L; //START:when CLK is high,DATA change form high to low
 	delay_us(4);
 	IIC_SCL_L; //钳住I2C总线，准备发送或接收数据
@@ -129,7 +129,7 @@ uint8_t MPU6050_IIC_WaitAck(void)
 void IIC_Ack(void)
 {
 	IIC_SCL_L;
-        MPU6050_SDA_OUT();
+    MPU6050_SDA_OUT();
 	IIC_SDA_L;
 	delay_us(1);
 	IIC_SCL_H;

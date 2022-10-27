@@ -4,13 +4,13 @@
 #include "stm32f1xx_hal.h"
 #include "usart.h"
 #include <stdio.h>
-#define husart_debug     huart3        //printfËùÓÃ´®¿ÚºÅ
-void uart_putchar (UART_HandleTypeDef *huart,char ch);//·¢ËÍÒ»¸ö×Ö·û
-void uart_putstr (UART_HandleTypeDef *huart,char str[]);//·¢ËÍ×Ö·û´®
+#define husart_debug     huart3        //printfæ‰€ç”¨ä¸²å£å·
+void uart_putchar (UART_HandleTypeDef *huart,char ch);//å‘é€ä¸€ä¸ªå­—ç¬¦
+void uart_putstr (UART_HandleTypeDef *huart,char str[]);//å‘é€å­—ç¬¦ä¸²
 void uart_putbuff (UART_HandleTypeDef *huart,uint8_t *buff, uint32_t len);//uart_putbuff (&huart1,(uint8_t *)"1234567", 7);
-void vcan_sendware(void *wareaddr, uint32_t waresize);//·¢ËÍÊı¾İ²¨ĞÎÖÁÉ½ÍâÉÏÎ»»úĞéÄâÊ¾²¨Æ÷
+void vcan_sendware(void *wareaddr, uint32_t waresize);//å‘é€æ•°æ®æ³¢å½¢è‡³å±±å¤–ä¸Šä½æœºè™šæ‹Ÿç¤ºæ³¢å™¨
 void uart_getchar(UART_HandleTypeDef *huart,char *ch);
-uint8_t uart_querychar (UART_HandleTypeDef *huart, char *ch);//²éÑ¯ÊÇ·ñ½ÓÊÜµ½Ò»¸ö×Ö½Ú
+uint8_t uart_querychar (UART_HandleTypeDef *huart, char *ch);//æŸ¥è¯¢æ˜¯å¦æ¥å—åˆ°ä¸€ä¸ªå­—èŠ‚
 uint8_t uart_querybuff (UART_HandleTypeDef *huart, char *buff, uint32_t max_len);
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *UartHandle);
 #endif

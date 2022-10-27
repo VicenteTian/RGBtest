@@ -1,86 +1,86 @@
 
 #include "UART.h"
 /*!
- *  @brief      ´®¿Ú·¢ËÍÒ»¸ö×Ö½Ú
- *  @param      UART_HandleTypeDef *huart   ´®¿ÚÖ¸Õë£¨Èç&huart1£©
- *  @param      ch          ĞèÒª·¢ËÍµÄ×Ö½Ú
- *  Sample usage:       uart_putchar(&huart1,'5');Í¨¹ıUART1·¢ËÍ×Ö·û5
+ *  @brief      ä¸²å£å‘é€ä¸€ä¸ªå­—èŠ‚
+ *  @param      UART_HandleTypeDef *huart   ä¸²å£æŒ‡é’ˆï¼ˆå¦‚&huart1ï¼‰
+ *  @param      ch          éœ€è¦å‘é€çš„å­—èŠ‚
+ *  Sample usage:       uart_putchar(&huart1,'5');é€šè¿‡UART1å‘é€å­—ç¬¦5
  */
 void uart_putchar (UART_HandleTypeDef *huart,char ch)
 {
-	    uint8_t *addr=(uint8_t *)&ch;
-			HAL_UART_Transmit(huart,addr,1,0);
-	    while(__HAL_UART_GET_FLAG(huart,UART_FLAG_TC)!=1);//µÈ´ı·¢ËÍÍê³É
+    uint8_t *addr=(uint8_t *)&ch;
+    HAL_UART_Transmit(huart,addr,1,50);
+    //while(__HAL_UART_GET_FLAG(huart,UART_FLAG_TC)!=1);//ç­‰å¾…å‘é€å®Œæˆ
 }
 /*!
- *  @brief      ´®¿Ú½ÓÊÕÒ»¸ö×Ö½Ú
- *  @param      UART_HandleTypeDef *huart   ´®¿ÚÖ¸Õë£¨Èç&huart1£©
- *  @param      ch          ½ÓÊÕÊı¾İ´æ·ÅµÄµØÖ·
- *  Sample usage:       uart_getchar(&huart2,&c);;Í¨¹ıUART12½ÓÊÕÒ»¸ö×Ö·û´æ·ÅÖÁc×Ö·û±äÁ¿ÖĞ
+ *  @brief      ä¸²å£æ¥æ”¶ä¸€ä¸ªå­—èŠ‚
+ *  @param      UART_HandleTypeDef *huart   ä¸²å£æŒ‡é’ˆï¼ˆå¦‚&huart1ï¼‰
+ *  @param      ch          æ¥æ”¶æ•°æ®å­˜æ”¾çš„åœ°å€
+ *  Sample usage:       uart_getchar(&huart2,&c);;é€šè¿‡UART12æ¥æ”¶ä¸€ä¸ªå­—ç¬¦å­˜æ”¾è‡³cå­—ç¬¦å˜é‡ä¸­
  */
 void uart_getchar(UART_HandleTypeDef *huart,char *ch)
 {
-	  if (HAL_UART_Receive(huart, (uint8_t *)ch, 1, 5)== HAL_ERROR)
-  {
-    Error_Handler();
-  }
+    if (HAL_UART_Receive(huart, (uint8_t *)ch, 1, 5)== HAL_ERROR)
+    {
+        Error_Handler();
+    }
 }
 /*!
- *  @brief      ²éÑ¯½ÓÊÕ1¸ö×Ö·û
- *  @param      UART_HandleTypeDef *huart   ´®¿ÚÖ¸Õë£¨Èç&huart1£©
- *  @param      ch          ½ÓÊÕµØÖ·
- *  @return     1Îª½ÓÊÕ³É¹¦£¬0Îª½ÓÊÕÊ§°Ü
+ *  @brief      æŸ¥è¯¢æ¥æ”¶1ä¸ªå­—ç¬¦
+ *  @param      UART_HandleTypeDef *huart   ä¸²å£æŒ‡é’ˆï¼ˆå¦‚&huart1ï¼‰
+ *  @param      ch          æ¥æ”¶åœ°å€
+ *  @return     1ä¸ºæ¥æ”¶æˆåŠŸï¼Œ0ä¸ºæ¥æ”¶å¤±è´¥
  *  Sample usage:       char ch ;
-                        if( uart_querychar (&huart2,&ch))     //²éÑ¯½ÓÊÕ1¸ö×Ö·û£¬±£´æµ½ chÀï
+                        if( uart_querychar (&huart2,&ch))     //æŸ¥è¯¢æ¥æ”¶1ä¸ªå­—ç¬¦ï¼Œä¿å­˜åˆ° ché‡Œ
                         {
-                            printf("³É¹¦½ÓÊÕµ½Ò»¸ö×Ö½Ú");
+                            printf("æˆåŠŸæ¥æ”¶åˆ°ä¸€ä¸ªå­—èŠ‚");
                         }
  */
 uint8_t uart_querychar (UART_HandleTypeDef *huart, char *ch)
 {
-	char str=0;
-	uart_getchar(huart,&str);
-    if(str)           //²éÑ¯ÊÇ·ñ½ÓÊÜµ½Êı¾İ
-    {      
-			 *ch=str;
-        return  1;                                             //·µ»Ø 1 ±íÊ¾½ÓÊÕ³É¹¦
+    char str=0;
+    uart_getchar(huart,&str);
+    if(str)           //æŸ¥è¯¢æ˜¯å¦æ¥å—åˆ°æ•°æ®
+    {
+        *ch=str;
+        return  1;                                             //è¿”å› 1 è¡¨ç¤ºæ¥æ”¶æˆåŠŸ
     }
-		*ch=0;
-    return 0;                                   //·µ»Ø0±íÊ¾½ÓÊÕÊ§°Ü
+    *ch=0;
+    return 0;                                   //è¿”å›0è¡¨ç¤ºæ¥æ”¶å¤±è´¥
 }
 /*!
- *  @brief      ²éÑ¯½ÓÊÕbuff
- *  @param      UART_HandleTypeDef *huart   ´®¿ÚÖ¸Õë£¨Èç&huart1£©
- *  @param      str         ½ÓÊÕµØÖ·
- *  @param      max_len     ×î´ó½ÓÊÕ³¤¶È
- *  @return     ½ÓÊÕµ½µÄ×Ö½ÚÊıÄ¿
+ *  @brief      æŸ¥è¯¢æ¥æ”¶buff
+ *  @param      UART_HandleTypeDef *huart   ä¸²å£æŒ‡é’ˆï¼ˆå¦‚&huart1ï¼‰
+ *  @param      str         æ¥æ”¶åœ°å€
+ *  @param      max_len     æœ€å¤§æ¥æ”¶é•¿åº¦
+ *  @return     æ¥æ”¶åˆ°çš„å­—èŠ‚æ•°ç›®
  *  Sample usage:       char buff[100];
                         uint32 num;
                         num = uart_pendbuff (UART3,&buff,100);
                         if( num != 0 )
                         {
-                            printf("³É¹¦½ÓÊÕµ½%d¸ö×Ö½Ú:%s",num,buff);
+                            printf("æˆåŠŸæ¥æ”¶åˆ°%dä¸ªå­—èŠ‚:%s",num,buff);
                         }
  */
 uint8_t uart_querybuff (UART_HandleTypeDef *huart, char *buff, uint32_t max_len)
 {
     uint32_t i = 0;
-	     while(uart_querychar(huart,buff+i))
-			 {
-				 i++; 		
-				 if(i>=max_len)	
-				 return i;	
-			 }
-			 return i;
+    while(uart_querychar(huart,buff+i))
+    {
+        i++;
+        if(i>=max_len)
+            return i;
+    }
+    return i;
 }
 
-	/**
- *  @brief      ·¢ËÍ×Ö·û´®
- *  @param      huart       Ä£¿éºÅ£¨UART0~UART5£©
- *  @param      str         ×Ö·û´®µØÖ·
- *  @since      v5.0
- *  Sample usage:       uart_putstr (&huart1,"1234567"); //Êµ¼Ê·¢ËÍÁË7¸ö×Ö½Ú
-  */
+/**
+*  @brief      å‘é€å­—ç¬¦ä¸²
+*  @param      huart       æ¨¡å—å·ï¼ˆUART0~UART5ï¼‰
+*  @param      str         å­—ç¬¦ä¸²åœ°å€
+*  @since      v5.0
+*  Sample usage:       uart_putstr (&huart1,"1234567"); //å®é™…å‘é€äº†7ä¸ªå­—èŠ‚
+*/
 void uart_putstr (UART_HandleTypeDef *huart,char str[])
 {
     while(*str)
@@ -89,12 +89,12 @@ void uart_putstr (UART_HandleTypeDef *huart,char str[])
     }
 }
 /*!
- *  @brief      ·¢ËÍÖ¸¶¨len¸ö×Ö½Ú³¤¶ÈÊı×é £¨°üÀ¨ NULL Ò²»á·¢ËÍ£©
- *  @param      UARTn_e       Ä£¿éºÅ£¨UART0~UART5£©
- *  @param      buff        Êı×éµØÖ·
- *  @param      len         ·¢ËÍÊı×éµÄ³¤¶È
+ *  @brief      å‘é€æŒ‡å®šlenä¸ªå­—èŠ‚é•¿åº¦æ•°ç»„ ï¼ˆåŒ…æ‹¬ NULL ä¹Ÿä¼šå‘é€ï¼‰
+ *  @param      UARTn_e       æ¨¡å—å·ï¼ˆUART0~UART5ï¼‰
+ *  @param      buff        æ•°ç»„åœ°å€
+ *  @param      len         å‘é€æ•°ç»„çš„é•¿åº¦
  *  @since      v5.0
- *  Sample usage:       uart_putbuff (&huart1,"1234567", 3); //Êµ¼Ê·¢ËÍÁË3¸ö×Ö½Ú'1','2','3'
+ *  Sample usage:       uart_putbuff (&huart1,"1234567", 3); //å®é™…å‘é€äº†3ä¸ªå­—èŠ‚'1','2','3'
  */
 void uart_putbuff (UART_HandleTypeDef *huart, uint8_t *buff, uint32_t len)
 {
@@ -105,60 +105,60 @@ void uart_putbuff (UART_HandleTypeDef *huart, uint8_t *buff, uint32_t len)
     }
 }
 /*!
- *  @brief      É½Íâ¶à¹¦ÄÜµ÷ÊÔÖúÊÖÉÏÎ»»ú£¬ĞéÄâÊ¾²¨Æ÷ÏÔÊ¾º¯Êı
- *  @param      wareaddr    ²¨ĞÎÊı×éÆğÊ¼µØÖ·
- *  @param      waresize    ²¨ĞÎÊı×éÕ¼ÓÃ¿Õ¼äµÄ´óĞ¡
+ *  @brief      å±±å¤–å¤šåŠŸèƒ½è°ƒè¯•åŠ©æ‰‹ä¸Šä½æœºï¼Œè™šæ‹Ÿç¤ºæ³¢å™¨æ˜¾ç¤ºå‡½æ•°
+ *  @param      wareaddr    æ³¢å½¢æ•°ç»„èµ·å§‹åœ°å€
+ *  @param      waresize    æ³¢å½¢æ•°ç»„å ç”¨ç©ºé—´çš„å¤§å°
  *  @since      v5.0
 *  Sample usage:
-Ê×ÏÈ¶¨Òå²¨ĞÎÊı×é£¬Èçuint16_t var[2];
-È»ºó¸øÊı×é³ÉÔ±¸³Öµ£¬Èçvar[0]=1;
-×îºóµ÷ÓÃº¯Êı   vcan_sendware((uint8_t *)var, sizeof(var));
+é¦–å…ˆå®šä¹‰æ³¢å½¢æ•°ç»„ï¼Œå¦‚uint16_t var[2];
+ç„¶åç»™æ•°ç»„æˆå‘˜èµ‹å€¼ï¼Œå¦‚var[0]=1;
+æœ€åè°ƒç”¨å‡½æ•°   vcan_sendware((uint8_t *)var, sizeof(var));
  */
 void vcan_sendware(void *wareaddr, uint32_t waresize)
 {
 #define CMD_WARE     3
-    uint8_t cmdf[2] = {CMD_WARE, ~CMD_WARE};    //´®¿Úµ÷ÊÔ Ê¹ÓÃµÄÇ°ÃüÁî
-    uint8_t cmdr[2] = {~CMD_WARE, CMD_WARE};    //´®¿Úµ÷ÊÔ Ê¹ÓÃµÄºóÃüÁî
+    uint8_t cmdf[2] = {CMD_WARE, ~CMD_WARE};    //ä¸²å£è°ƒè¯• ä½¿ç”¨çš„å‰å‘½ä»¤
+    uint8_t cmdr[2] = {~CMD_WARE, CMD_WARE};    //ä¸²å£è°ƒè¯• ä½¿ç”¨çš„åå‘½ä»¤
     HAL_UART_Transmit(&husart_debug,cmdf,sizeof(cmdf),100);
-		HAL_UART_Transmit(&husart_debug,(uint8_t *)wareaddr,waresize,100);
-		HAL_UART_Transmit(&husart_debug,cmdr,sizeof(cmdr),100);
-//    uart_putbuff(&husart_debug, cmdf, sizeof(cmdf));    //ÏÈ·¢ËÍÇ°ÃüÁî
-//    uart_putbuff(&husart_debug, (uint8_t *)wareaddr, waresize);    //·¢ËÍÊı¾İ
-//    uart_putbuff(&husart_debug, cmdr, sizeof(cmdr));    //·¢ËÍºóÃüÁî
+    HAL_UART_Transmit(&husart_debug,(uint8_t *)wareaddr,waresize,100);
+    HAL_UART_Transmit(&husart_debug,cmdr,sizeof(cmdr),100);
+//    uart_putbuff(&husart_debug, cmdf, sizeof(cmdf));    //å…ˆå‘é€å‰å‘½ä»¤
+//    uart_putbuff(&husart_debug, (uint8_t *)wareaddr, waresize);    //å‘é€æ•°æ®
+//    uart_putbuff(&husart_debug, cmdr, sizeof(cmdr));    //å‘é€åå‘½ä»¤
 
 }
 /**
-  * º¯Êı¹¦ÄÜ: ÖØ¶¨Ïòc¿âº¯Êıprintfµ½DEBUG_USARTx
-  * ÊäÈë²ÎÊı: ÎŞ
-  * ·µ »Ø Öµ: ÎŞ
-  * Ëµ    Ã÷£ºÎŞ
+  * å‡½æ•°åŠŸèƒ½: é‡å®šå‘cåº“å‡½æ•°printfåˆ°DEBUG_USARTx
+  * è¾“å…¥å‚æ•°: æ— 
+  * è¿” å› å€¼: æ— 
+  * è¯´    æ˜ï¼šæ— 
   */
 int fputc(int ch, FILE *f)
 {
-  HAL_UART_Transmit(&husart_debug, (uint8_t *)&ch, 1, 0);
-	while(__HAL_UART_GET_FLAG(&husart_debug,UART_FLAG_TC)!=1);//µÈ´ı·¢ËÍÍê³É
-  return ch;
+    HAL_UART_Transmit(&husart_debug, (uint8_t *)&ch, 1, 0);
+    while(__HAL_UART_GET_FLAG(&husart_debug,UART_FLAG_TC)!=1);//ç­‰å¾…å‘é€å®Œæˆ
+    return ch;
 }
 
 /**
-  * º¯Êı¹¦ÄÜ: ÖØ¶¨Ïòc¿âº¯Êıgetchar,scanfµ½DEBUG_USARTx
-  * ÊäÈë²ÎÊı: ÎŞ
-  * ·µ »Ø Öµ: ÎŞ
-  * Ëµ    Ã÷£º¸Ä±ä´®¿ÚºÅ&huart1¼´¿É¸Ä±äprintfËùÓÃµÄ´®¿Ú
+  * å‡½æ•°åŠŸèƒ½: é‡å®šå‘cåº“å‡½æ•°getchar,scanfåˆ°DEBUG_USARTx
+  * è¾“å…¥å‚æ•°: æ— 
+  * è¿” å› å€¼: æ— 
+  * è¯´    æ˜ï¼šæ”¹å˜ä¸²å£å·&huart1å³å¯æ”¹å˜printfæ‰€ç”¨çš„ä¸²å£
   */
 int fgetc(FILE * f)
 {
-  uint8_t ch = 0;
-  HAL_UART_Receive(&husart_debug,&ch, 1, 5);
-  return ch;
+    uint8_t ch = 0;
+    HAL_UART_Receive(&husart_debug,&ch, 1, 5);
+    return ch;
 }
 /**
-  * º¯Êı¹¦ÄÜ: ´®¿Ú½ÓÊÕÍê³É»Øµ÷º¯Êı
-  * ÊäÈë²ÎÊı: ÎŞ
-  * ·µ »Ø Öµ: ÎŞ
-  * Ëµ    Ã÷£ºÎŞ
+  * å‡½æ•°åŠŸèƒ½: ä¸²å£æ¥æ”¶å®Œæˆå›è°ƒå‡½æ•°
+  * è¾“å…¥å‚æ•°: æ— 
+  * è¿” å› å€¼: æ— 
+  * è¯´    æ˜ï¼šæ— 
   */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *UartHandle)
 {
-		printf("½ÓÊÕÖĞ¶Ï±»´¥·¢à¶\n");	
+    printf("æ¥æ”¶ä¸­æ–­è¢«è§¦å‘å–½\n");
 }

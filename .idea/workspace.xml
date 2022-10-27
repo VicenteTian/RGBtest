@@ -17,7 +17,26 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb65de40-eefe-49da-8f1c-792a41f6b96e" name="Changes" comment="" />
+    <list default="true" id="eb65de40-eefe-49da-8f1c-792a41f6b96e" name="Changes" comment="feat: 获取MPU6050中的数据">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/UART.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/UART.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/MPU6050.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/MPU6050.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/UART.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/UART.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u_iic.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/u_iic.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-c21bbe84f7cab2b9b7e0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-5a4235f8285b593adf36.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-10-25T09-58-32-0366.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-RGBtest.elf-Debug-0652b8003ce27c001a1c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/RGBtest.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RGBtest.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/RGBtest.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RGBtest.elf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/RGBtest.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RGBtest.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/RGBtest.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RGBtest.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +46,9 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Core/Src/main.c" root0="SKIP_INSPECTION" />
   </component>
@@ -39,29 +61,34 @@
     <option name="minorVersion" value="2.4" />
   </component>
   <component name="ProjectId" id="2GQogwdYcN16cUjwX9FDl3WjB5d" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/files/project/Toy_car/RGBtest/RGBtest.ioc&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "E:/files/project/Toy_car/RGBtest/RGBtest.ioc",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="OpenOCD 下载并运行.OCD_stlink">
-    <configuration name="RGBtest.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGBtest" TARGET_NAME="RGBtest.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="RGBtest" RUN_TARGET_NAME="RGBtest.elf">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="RGBtest.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGBtest" TARGET_NAME="RGBtest.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="RGBtest" RUN_TARGET_NAME="RGBtest.elf">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -97,11 +124,48 @@
       <workItem from="1666579991837" duration="2053000" />
       <workItem from="1666684673114" duration="66000" />
       <workItem from="1666684746515" duration="6727000" />
-      <workItem from="1666691943123" duration="1751000" />
+      <workItem from="1666691943123" duration="5511000" />
+      <workItem from="1666837236910" duration="9461000" />
     </task>
+    <task id="LOCAL-00001" summary="refactor: OLED注释修改">
+      <created>1666694963172</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666694963172</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: 获取MPU6050中的数据">
+      <created>1666858818433</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666858818433</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="refactor: OLED注释修改" />
+    <MESSAGE value="feat: 获取MPU6050中的数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 获取MPU6050中的数据" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
