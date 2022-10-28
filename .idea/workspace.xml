@@ -17,24 +17,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb65de40-eefe-49da-8f1c-792a41f6b96e" name="Changes" comment="feat: MPU6050通过DMP获取欧拉角">
-      <change afterPath="$PROJECT_DIR$/Core/Inc/retarget.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Src/retarget.c" afterDir="false" />
+    <list default="true" id="eb65de40-eefe-49da-8f1c-792a41f6b96e" name="Changes" comment="fix: 利用DMP自检，获取更准确的欧拉角">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/oled.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/oled.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/oledfont.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/oledfont.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/oled.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/oled.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/eMPL/inv_mpu.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/eMPL/inv_mpu.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/eMPL/inv_mpu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/eMPL/inv_mpu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/eMPL/inv_mpu_dmp_motion_driver.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/eMPL/inv_mpu_dmp_motion_driver.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/RGBtest.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RGBtest.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/RGBtest.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RGBtest.elf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/RGBtest.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RGBtest.hex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/RGBtest.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RGBtest.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +109,7 @@
       <workItem from="1666684673114" duration="66000" />
       <workItem from="1666684746515" duration="6727000" />
       <workItem from="1666691943123" duration="5511000" />
-      <workItem from="1666837236910" duration="24709000" />
+      <workItem from="1666837236910" duration="25479000" />
     </task>
     <task id="LOCAL-00001" summary="refactor: OLED注释修改">
       <created>1666694963172</created>
@@ -154,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666887104558</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix: 利用DMP自检，获取更准确的欧拉角">
+      <created>1666932077945</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666932077945</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +169,8 @@
     <MESSAGE value="feat: 获取MPU6050中的数据" />
     <MESSAGE value="refactor: 文件注释重写" />
     <MESSAGE value="feat: MPU6050通过DMP获取欧拉角" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: MPU6050通过DMP获取欧拉角" />
+    <MESSAGE value="fix: 利用DMP自检，获取更准确的欧拉角" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 利用DMP自检，获取更准确的欧拉角" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
