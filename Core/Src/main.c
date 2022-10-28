@@ -28,6 +28,7 @@
 #include "MPU6050.h"
 #include "inv_mpu.h"
 #include "UART.h"
+#include "retarget.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -65,99 +66,125 @@ void SystemClock_Config(void);
   * @brief  The application entry point.
   * @retval int
   */
-int main(void)
-{
-  /* USER CODE BEGIN 1 */
-    float var_MPU6050[4]={0};
+int main(void) {
+    /* USER CODE BEGIN 1 */
+    float var_MPU6050[4] = {0};
     /* USER CODE END 1 */
 
-  /* MCU Configuration--------------------------------------------------------*/
+    /* MCU Configuration--------------------------------------------------------*/
 
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+    /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+    HAL_Init();
 
-  /* USER CODE BEGIN Init */
+    /* USER CODE BEGIN Init */
 
-  /* USER CODE END Init */
+    /* USER CODE END Init */
 
-  /* Configure the system clock */
-  SystemClock_Config();
+    /* Configure the system clock */
+    SystemClock_Config();
 
-  /* USER CODE BEGIN SysInit */
+    /* USER CODE BEGIN SysInit */
 
-  /* USER CODE END SysInit */
+    /* USER CODE END SysInit */
 
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_USART3_UART_Init();
-  /* USER CODE BEGIN 2 */
-    OLED_Init();
-    OLED_ShowPicture(0,0,128,64,BMP1,1);
-   // if(!MPU6050_Init())
-        HAL_GPIO_WritePin(GPIOA, Green_Pin, GPIO_PIN_RESET);
-    mpu_dmp_init();								 //=====³õÊ¼»¯MPU6050µÄDMPÄ£Ê½
-    OLED_Clear();
-    OLED_ShowString(0,0,"Pitch:",12,1);
-    OLED_ShowString(0,8,"Roll :",12,1);
-    OLED_ShowString(0,16,"Yaw  :",12,1);
-    OLED_ShowString(0,32,"Temp :",12,1);
-  /* USER CODE END 2 */
+    /* Initialize all configured peripherals */
+    MX_GPIO_Init();
+    MX_USART3_UART_Init();
+    /* USER CODE BEGIN 2 */
+    RetargetInit(&huart3);
+    OLED_Init();                   //=====OLED初始化
+    OLED_Clear();                  //=====OLED清屏
+    // if(!MPU6050_Init())
+    HAL_GPIO_WritePin(GPIOA, Green_Pin, GPIO_PIN_RESET);
+    mpu_dmp_init();
+    OLED_ShowString(0, 0, "Pitch:", 12);
+    OLED_ShowString(0, 2, "Roll :", 12);
+    OLED_ShowString(0, 4, "Yaw  :", 12);
+    OLED_ShowString(0, 6, "Temp :", 12);
+    /* USER CODE END 2 */
 
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
+    /* Infinite loop */
+    /* USER CODE BEGIN WHILE */
     while (1) {
-    /* USER CODE END WHILE */
+        /* USER CODE END WHILE */
 
-    /* USER CODE BEGIN 3 */
-        HAL_Delay(50);
-        var_MPU6050[3]=mpu_dmp_get_data(&var_MPU6050[0],&var_MPU6050[1],&var_MPU6050[2]);			//得到姿态角即欧拉角
-        vcan_sendware((uint8_t *)var_MPU6050, sizeof(var_MPU6050));
+        /* USER CODE BEGIN 3 */
+        //HAL_Delay(20);
+        var_MPU6050[3] = mpu_dmp_get_data(&var_MPU6050[0], &var_MPU6050[1], &var_MPU6050[2]);            //得到姿态角即欧拉角
+        //vcan_sendware((uint8_t *)var_MPU6050, sizeof(var_MPU6050));
+        /**************显示俯仰角***************/
+        if (var_MPU6050[0] < 0) {
+            OLED_ShowString(48, 0, "-", 12);
+            OLED_Float(0, 56, -var_MPU6050[0], 3);
+        } else {
+            OLED_ShowString(48, 0, "+", 12);
+            OLED_Float(0, 56, var_MPU6050[0], 3);
+        }
+/**************显示俯仰角***************/
+
+/**************显示翻滚角***************/
+        if (var_MPU6050[1] < 0) {
+            OLED_ShowString(48, 2, "-", 12);
+            OLED_Float(2, 56, -var_MPU6050[1], 3);
+        } else {
+            OLED_ShowString(48, 2, "+", 12);
+            OLED_Float(2, 56, var_MPU6050[1], 3);
+        }
+/**************显示翻滚角***************/
+
+/**************显示航向角***************/
+        if (var_MPU6050[2] < 0) {
+            OLED_ShowString(48, 4, "-", 12);
+            OLED_Float(4, 56, -var_MPU6050[2], 3);
+        } else {
+            OLED_ShowString(48, 4, "+", 12);
+            OLED_Float(4, 56, var_MPU6050[2], 3);
+        }
+/**************显示航向角***************/
+        OLED_Float(6,48,MPU_Get_Temperature(),2);	//显示温度
 
     }
-  /* USER CODE END 3 */
+    /* USER CODE END 3 */
 }
 
 /**
   * @brief System Clock Configuration
   * @retval None
   */
-void SystemClock_Config(void)
-{
-  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
-  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+void SystemClock_Config(void) {
+    RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+    RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
-  /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
-  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
-  RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
-  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
-  {
-    Error_Handler();
-  }
+    /** Initializes the RCC Oscillators according to the specified parameters
+    * in the RCC_OscInitTypeDef structure.
+    */
+    RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+    RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+    RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
+    RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+    RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+    RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+    RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
+    if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK) {
+        Error_Handler();
+    }
 
-  /** Initializes the CPU, AHB and APB buses clocks
-  */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+    /** Initializes the CPU, AHB and APB buses clocks
+    */
+    RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+                                  | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+    RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+    RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+    RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+    RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
-  {
-    Error_Handler();
-  }
+    if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK) {
+        Error_Handler();
+    }
 
-  /** Enables the Clock Security System
-  */
-  HAL_RCC_EnableCSS();
+    /** Enables the Clock Security System
+    */
+    HAL_RCC_EnableCSS();
 }
 
 /* USER CODE BEGIN 4 */
@@ -168,14 +195,13 @@ void SystemClock_Config(void)
   * @brief  This function is executed in case of error occurrence.
   * @retval None
   */
-void Error_Handler(void)
-{
-  /* USER CODE BEGIN Error_Handler_Debug */
+void Error_Handler(void) {
+    /* USER CODE BEGIN Error_Handler_Debug */
     /* User can add his own implementation to report the HAL error return state */
     __disable_irq();
     while (1) {
     }
-  /* USER CODE END Error_Handler_Debug */
+    /* USER CODE END Error_Handler_Debug */
 }
 
 #ifdef  USE_FULL_ASSERT

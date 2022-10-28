@@ -17,20 +17,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb65de40-eefe-49da-8f1c-792a41f6b96e" name="Changes" comment="refactor: 文件注释重写">
-      <change afterPath="$PROJECT_DIR$/Core/eMPL/dmpKey.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/eMPL/dmpmap.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/eMPL/inv_mpu.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/eMPL/inv_mpu.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/eMPL/inv_mpu_dmp_motion_driver.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/eMPL/inv_mpu_dmp_motion_driver.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="eb65de40-eefe-49da-8f1c-792a41f6b96e" name="Changes" comment="feat: MPU6050通过DMP获取欧拉角">
+      <change afterPath="$PROJECT_DIR$/Core/Inc/retarget.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Src/retarget.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/MPU6050.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/MPU6050.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/MPU6050.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/MPU6050.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/oled.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/oled.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/oledfont.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/oledfont.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/oled.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/oled.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/eMPL/inv_mpu.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/eMPL/inv_mpu.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/eMPL/inv_mpu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/eMPL/inv_mpu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/eMPL/inv_mpu_dmp_motion_driver.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/eMPL/inv_mpu_dmp_motion_driver.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/RGBtest.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/RGBtest.bin" afterDir="false" />
@@ -96,7 +93,7 @@
       </method>
     </configuration>
     <configuration name="OCD_stlink" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RGBtest" TARGET_NAME="RGBtest.elf" CONFIG_NAME="Debug" version="1" RUN_TARGET_PROJECT_NAME="RGBtest" RUN_TARGET_NAME="RGBtest.elf">
-      <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="E:\files\project\Toy_car\RGBtest\config\stlink.cfg" reset-type="INIT" download-type="UPDATED_ONLY">
+      <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="E:\files\project\Toy_car\RGBtest\config\stlink.cfg" reset-type="INIT" download-type="ALWAYS">
         <debugger kind="GDB" isBundled="true" />
       </openocd>
       <method v="2">
@@ -127,7 +124,7 @@
       <workItem from="1666684673114" duration="66000" />
       <workItem from="1666684746515" duration="6727000" />
       <workItem from="1666691943123" duration="5511000" />
-      <workItem from="1666837236910" duration="15976000" />
+      <workItem from="1666837236910" duration="24709000" />
     </task>
     <task id="LOCAL-00001" summary="refactor: OLED注释修改">
       <created>1666694963172</created>
@@ -150,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666879571090</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: MPU6050通过DMP获取欧拉角">
+      <created>1666887104558</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666887104558</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +176,19 @@
     <MESSAGE value="refactor: OLED注释修改" />
     <MESSAGE value="feat: 获取MPU6050中的数据" />
     <MESSAGE value="refactor: 文件注释重写" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: 文件注释重写" />
+    <MESSAGE value="feat: MPU6050通过DMP获取欧拉角" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: MPU6050通过DMP获取欧拉角" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Core/Src/main.c</url>
+          <line>76</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

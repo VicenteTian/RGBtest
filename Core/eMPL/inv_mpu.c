@@ -2881,7 +2881,7 @@ uint8_t run_self_test(void)
 	//char test_packet[4] = {0};
 	long gyro[3], accel[3]; 
 	result = mpu_run_self_test(gyro, accel);
-	if (result == 0x7) 
+	if (result == 0x03)
 	{
 		/* Test passed. We can trust the gyro data here, so let's push it down
 		* to the DMP.
@@ -2898,6 +2898,7 @@ uint8_t run_self_test(void)
 		accel[1] *= accel_sens;
 		accel[2] *= accel_sens;
 		dmp_set_accel_bias(accel);
+        printf("setting bias succesfully ......\r\n");
 		return 0;
 	}else return 1;
 }
@@ -2949,39 +2950,32 @@ void mget_ms(unsigned long *time)
 
 }
 //mpu6050,dmp初始化
-//返回值:0,正常
-//    其他,失败
-uint8_t mpu_dmp_init(void)
+void mpu_dmp_init(void)
 {
-	uint8_t res=0;
 	//MPU_IIC_Init(); 	//初始化IIC总线
 	if(mpu_init()==0)	//初始化MPU6050
-	{	 
-		res=mpu_set_sensors(INV_XYZ_GYRO|INV_XYZ_ACCEL);//设置所需要的传感器
-		if(res)return 1; 
-		res=mpu_configure_fifo(INV_XYZ_GYRO|INV_XYZ_ACCEL);//设置FIFO
-		if(res)return 2; 
-		res=mpu_set_sample_rate(DEFAULT_MPU_HZ);	//设置采样率
-		if(res)return 3; 
-		res=dmp_load_motion_driver_firmware();		//加载dmp固件
-		if(res)return 4; 
-		res=dmp_set_orientation(inv_orientation_matrix_to_scalar(gyro_orientation));//设置陀螺仪方向
-		if(res)return 5; 
-		res=dmp_enable_feature(DMP_FEATURE_6X_LP_QUAT|DMP_FEATURE_TAP|	//设置dmp功能
-		    DMP_FEATURE_ANDROID_ORIENT|DMP_FEATURE_SEND_RAW_ACCEL|DMP_FEATURE_SEND_CAL_GYRO|
-		    DMP_FEATURE_GYRO_CAL);
-		if(res)return 6; 
-		res=dmp_set_fifo_rate(DEFAULT_MPU_HZ);	//设置DMP输出速率(最大不超过200Hz)
-		if(res)return 7;   
-		res=run_self_test();		//自检
-	//	if(res)return 8;    
-		res=mpu_set_dmp_state(1);	//使能DMP
-		if(res)return 9;     
-	}else return 10;
-	return 0;
+	{
+        if(!mpu_set_sensors(INV_XYZ_GYRO | INV_XYZ_ACCEL))
+            printf("mpu_set_sensor complete ......\r\n");
+        if(!mpu_configure_fifo(INV_XYZ_GYRO | INV_XYZ_ACCEL))
+            printf("mpu_configure_fifo complete ......\r\n");
+        if(!mpu_set_sample_rate(DEFAULT_MPU_HZ))
+            printf("mpu_set_sample_rate complete ......\r\n");
+        if(!dmp_load_motion_driver_firmware())
+            printf("dmp_load_motion_driver_firmware complete ......\r\n");
+        if(!dmp_set_orientation(inv_orientation_matrix_to_scalar(gyro_orientation)))
+            printf("dmp_set_orientation complete ......\r\n");
+        if(!dmp_enable_feature(DMP_FEATURE_6X_LP_QUAT | DMP_FEATURE_TAP |
+                               DMP_FEATURE_ANDROID_ORIENT | DMP_FEATURE_SEND_RAW_ACCEL | DMP_FEATURE_SEND_CAL_GYRO |
+                               DMP_FEATURE_GYRO_CAL))
+            printf("dmp_enable_feature complete ......\r\n");
+        if(!dmp_set_fifo_rate(DEFAULT_MPU_HZ))
+            printf("dmp_set_fifo_rate complete ......\r\n");
+        run_self_test();  //该函数决定了是否设置起始零偏,要求自行自检时，Z轴竖直向上或者竖直向下：
+        if(!mpu_set_dmp_state(1))
+            printf("mpu_set_dmp_state complete ......\r\n");
+	}else printf("mpu init failed ......\r\n");
 }
-
-
 //得到dmp处理后的数据(注意,本函数需要比较多堆栈,局部变量有点多)
 //pitch:俯仰角 精度:0.1°   范围:-90.0° <---> +90.0°
 //roll:横滚角  精度:0.1°   范围:-180.0°<---> +180.0°

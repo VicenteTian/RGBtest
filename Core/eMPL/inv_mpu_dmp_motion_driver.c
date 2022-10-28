@@ -1272,8 +1272,7 @@ int dmp_read_fifo(short *gyro, short *accel, long *quat,
     unsigned char fifo_data[MAX_PACKET_LENGTH];
     unsigned char ii = 0;
 
-    /* TODO: sensors[0] only changes when dmp_enable_feature is called. We can
-     * cache this value and save some cycles.
+    /* TODO: sensors[0] only changes when dmp_enable_feature is called. We can cache this value and save some cycles.
      */
     sensors[0] = 0;
 
